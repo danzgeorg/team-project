@@ -1,0 +1,18 @@
+-- =====================================================
+-- Cross-Subsystem Views / Access Setup
+-- Nova Solutions — Team 24/C
+-- =====================================================
+-- Sets up read access to IPOS-SA and IPOS-CA schemas.
+-- Used by adapter classes (InventoryDBAdapter, MerchantAccountDBAdapter, etc.)
+-- Worth 10 demo marks.
+--
+-- Prerequisites:
+--   - Teams 22 and 23 have shared their CREATE TABLE statements
+--   - Their schemas (ipos_sa, ipos_ca) exist on the same MySQL server
+--
+-- This file contains:
+--   - GRANT statements for read access
+--   - Optional VIEWs to simplify adapter queries
+-- =====================================================
+
+-- TODO: Ergun to coordinate with Teams 22/23 — Week 7-8

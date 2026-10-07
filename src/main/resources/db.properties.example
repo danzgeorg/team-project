@@ -1,0 +1,31 @@
+# =====================================================
+# IPOS-PU Database Configuration
+# =====================================================
+# Copy this file to db.properties (same directory) and fill in your local values.
+# db.properties is gitignored — your credentials will NOT be committed.
+#
+# Setup instructions:
+# 1. Install MySQL 8.0 locally
+# 2. Create database:  CREATE DATABASE ipos_pu;
+# 3. Create user:      CREATE USER 'ipospu_user'@'localhost' IDENTIFIED BY 'your_password';
+# 4. Grant access:     GRANT ALL PRIVILEGES ON ipos_pu.* TO 'ipospu_user'@'localhost';
+# 5. For cross-subsystem (10 marks), also grant READ on SA/CA schemas:
+#    GRANT SELECT ON ipos_sa.* TO 'ipospu_user'@'localhost';
+#    GRANT SELECT ON ipos_ca.* TO 'ipospu_user'@'localhost';
+# 6. Run sql/ipos_pu_schema.sql to create tables
+# 7. Run sql/ipos_pu_seed_data.sql to populate test data
+
+# PU database (your team's)
+pu.url=jdbc:mysql://localhost:3306/ipos_pu
+pu.username=ipospu_user
+pu.password=your_password_here
+
+# CA database (commercial applications team — get credentials from CA team)
+ca.url=jdbc:mysql://localhost:3306/ipos_ca
+ca.username=iposca_user
+ca.password=ca_password_here
+
+# SA database (system administration team — get credentials from SA team)
+sa.url=jdbc:mysql://localhost:3306/ipos_sa
+sa.username=ipossa_user
+sa.password=sa_password_here
