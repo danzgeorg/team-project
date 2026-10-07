@@ -1,3 +1,5 @@
+This is a copy of the [team project](https://github.com/ergunmalay/TeamProject-IN2033)
+
 # IPOS-PU — InfoPharma Online Purchasing System (Public Portal)
 
 **Team 24/C — Nova Solutions**
