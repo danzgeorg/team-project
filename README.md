@@ -1,4 +1,4 @@
-# This is a copy of the [team project](https://github.com/ergunmalay/TeamProject-IN2033).
+> This is a copy of my team's repository, [TeamProject-IN2033](https://github.com/ergunmalay/TeamProject-IN2033). I was deputy project manager and wrote the interface definitions, `OrderService`, the checkout logic and the payment API.
 
 # IPOS-PU — InfoPharma Online Purchasing System (Public Portal)
 
