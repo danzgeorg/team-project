@@ -29,7 +29,7 @@ IN2033 Team Project | City, St George's University of London
 
 ## My contribution
 
-**Dan Georgiev, Deputy Project Manager / Programmer.** The project ran from January to April 2026, and the module mark was 97.5%.
+**Dan Georgiev, Deputy Project Manager / Programmer.** The project ran from January to April 2026, and I achieved 97.5% in the module.
 
 ### Project management
 
