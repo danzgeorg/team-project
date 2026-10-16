@@ -47,9 +47,9 @@ IN2033 Team Project | City, St George's University of London
 | Simulated payment API | Validates cards, stores only a masked card number, and blocks refunds once an order is shipped or delivered | [`PU_PaymentAPI.java`](src/main/java/com/novasolutions/ipospu/impl/PU_PaymentAPI.java), [`PaymentDAO.java`](src/main/java/com/novasolutions/ipospu/db/PaymentDAO.java) |
 | Cart and order history | The shopping cart and the order history screen | [`CartScreen.java`](src/main/java/com/novasolutions/ipospu/gui/CartScreen.java), [`CartService.java`](src/main/java/com/novasolutions/ipospu/service/CartService.java), [`OrderHistoryScreen.java`](src/main/java/com/novasolutions/ipospu/gui/OrderHistoryScreen.java) |
 | Database schema | IPOS-PU tables | [`ipos_pu_schema.sql`](sql/ipos_pu_schema.sql) |
-| Async loading | Loads data on a background thread and updates the UI with `Platform.runLater`, so screens open straight away instead of freezing while the remote MySQL database responds | [`CatalogueScreen.java`](src/main/java/com/novasolutions/ipospu/gui/CatalogueScreen.java) [add the other screens you did this for, e.g. OrderHistoryScreen, CheckoutScreen, ReportsScreen] |
+| Async loading | Loads data on a background thread and updates the UI with `Platform.runLater`, so screens open straight away instead of freezing while the remote MySQL database responds | [`CatalogueScreen.java`](src/main/java/com/novasolutions/ipospu/gui/CatalogueScreen.java) [`OrderHistoryScreen`](src/main/java/com/novasolutions/ipospu/gui/OrderHistoryScreen.java), [`CheckoutScreen`](src/main/java/com/novasolutions/ipospu/gui/CheckoutScreen.java),  |
 
-> The owners in the Use Cases, GUI Screens, Development Roadmap and Team tables below come from the original Week 7 plan. [Confirm and keep, or delete: during the project, ownership changed, and I also built the cart, order history screen and stock adapter, which the plan had assigned to Alesha, Hassan and Ergun.]
+> The owners in the Use Cases, GUI Screens, Development Roadmap and Team tables below come from the original Week 7 plan. During the project, ownership changed, and I also built the cart, order history screen and stock adapter, which the plan had assigned to Alesha, Hassan and Ergun.]
 
 ---
 
