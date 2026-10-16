@@ -1,4 +1,4 @@
-> This is a copy of my team's repository, [TeamProject-IN2033](https://github.com/ergunmalay/TeamProject-IN2033).
+> This is a copy of my team's repository, [TeamProject-IN2033](https://github.com/ergunmalay/TeamProject-IN2033). I'm Dan Georgiev, the team's deputy project manager. My own contribution is listed under [My contribution](#my-contribution) below. Everything else in this README is the team's shared documentation, kept as it was.
 
 # IPOS-PU — InfoPharma Online Purchasing System (Public Portal)
 
@@ -9,6 +9,7 @@ IN2033 Team Project | City, St George's University of London
 
 ## Table of Contents
 
+0. [My contribution](#my-contribution)
 1. [Project Overview](#project-overview)
 2. [Technology Stack](#technology-stack)
 3. [Architecture](#architecture)
@@ -23,6 +24,33 @@ IN2033 Team Project | City, St George's University of London
 12. [Development Roadmap](#development-roadmap)
 13. [Team](#team)
 14. [Coding Conventions](#coding-conventions)
+
+---
+
+## My contribution
+
+**Dan Georgiev, Deputy Project Manager / Programmer.** The project ran from January to April 2026, and the module mark was 97.5%.
+
+### Project management
+
+- Made project decisions with the PM (Ergun) and kept the shared project binder up to date.
+- Coordinated with Teams 22 and 23 to agree on the shared database setup and the interfaces between subsystems.
+- Set up the branch and pull request workflow, with no direct pushes to `main`, as agreed with the PM.
+
+### Code I wrote
+
+| Area | What it does | Files |
+|------|--------------|-------|
+| Subsystem interfaces | Defined the provided and required interfaces used to integrate with Teams 22 and 23 | [`interfaces/provided/`](src/main/java/com/novasolutions/ipospu/interfaces/provided), [`interfaces/required/`](src/main/java/com/novasolutions/ipospu/interfaces/required) |
+| Cross-subsystem adapter | Checks and deducts stock directly in Team 23's schema (`checkStock`, `deductStock`) | [`InventoryDBAdapter.java`](src/main/java/com/novasolutions/ipospu/impl/InventoryDBAdapter.java) |
+| Checkout and orders | Runs checkout end to end: stock check, payment, order creation, a confirmation email, and the 10th-order loyalty discount for non-commercial members | [`OrderService.java`](src/main/java/com/novasolutions/ipospu/service/OrderService.java), [`CheckoutScreen.java`](src/main/java/com/novasolutions/ipospu/gui/CheckoutScreen.java), [`OrderDAO.java`](src/main/java/com/novasolutions/ipospu/db/OrderDAO.java) |
+| Simulated payment API | Validates cards, stores only a masked card number, and blocks refunds once an order is shipped or delivered | [`PU_PaymentAPI.java`](src/main/java/com/novasolutions/ipospu/impl/PU_PaymentAPI.java), [`PaymentDAO.java`](src/main/java/com/novasolutions/ipospu/db/PaymentDAO.java) |
+| Cart and order history | The shopping cart and the order history screen | [`CartScreen.java`](src/main/java/com/novasolutions/ipospu/gui/CartScreen.java), [`CartService.java`](src/main/java/com/novasolutions/ipospu/service/CartService.java), [`OrderHistoryScreen.java`](src/main/java/com/novasolutions/ipospu/gui/OrderHistoryScreen.java) |
+| Database schema | IPOS-PU tables | [`ipos_pu_schema.sql`](sql/ipos_pu_schema.sql) |
+| Async loading | Loads data on a background thread and updates the UI with `Platform.runLater`, so screens open straight away instead of freezing while the remote MySQL database responds | [`CatalogueScreen.java`](src/main/java/com/novasolutions/ipospu/gui/CatalogueScreen.java) [add the other screens you did this for, e.g. OrderHistoryScreen, CheckoutScreen, ReportsScreen] |
+| Tests | [Which tests did you write? e.g. OrderServiceTest (7 tests). Delete this row if none] | [`OrderServiceTest.java`](src/test/java/com/novasolutions/ipospu/service/OrderServiceTest.java) |
+
+> The owners in the Use Cases, GUI Screens, Development Roadmap and Team tables below come from the original Week 7 plan. [Confirm and keep, or delete: during the project, ownership changed, and I also built the cart, order history screen and stock adapter, which the plan had assigned to Alesha, Hassan and Ergun.]
 
 ---
 
